@@ -13,7 +13,7 @@
   	<parent>
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter-parent</artifactId>
-	    <version>1.2.8.RELEASE</version>
+	    <version>1.5.2.RELEASE</version>
 	</parent>
 	
 	
@@ -54,6 +54,19 @@
       <scope>test</scope>
     </dependency>
     
+    <!-- spring boot test-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+    
+    <!--eureka server -->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-eureka-server</artifactId>
+    </dependency>
+    
     <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-config</artifactId>
@@ -67,6 +80,12 @@
   
   
   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     <finalName>springcloud-demo</finalName>
   </build>
 </project>
